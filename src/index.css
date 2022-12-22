@@ -1,13 +1,117 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+:root {
+    --letter_color: #050106;
+    --background_color: #0a171c;
+    --button_color: #26392e;
+    --input_color: white;
+    --container_color: #5b837f;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+html {
+    font-family: 'Overpass', sans-serif;
+    color: var(--letter_color);
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    background-color: var(--background_color);
+}
+
+.container {
+    margin-top: 10rem;
+    width: 30rem;
+    height: 35rem;
+    display: flex;
+    background-color: var(--container_color);
+    padding: 1rem;
+    box-shadow: var(--button_color) 5px 2px 2px;
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    flex-direction: row;
+}
+
+.login__form {
+    display: flex;
+    flex-direction: column;
+}
+
+.personal-data,
+.acces-data {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-weight: bold;
+}
+
+.personal-data div,
+.acces-data div {
+    margin-top: 1%;
+    margin-left: 1%;
+    padding: 1rem;
+    margin-left: 1%;
+}
+
+.input__text,
+.input__date {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin-top: 1rem;
+    width: 100%;
+}
+
+.input__text input,
+.input__date input,
+.input__text select {
+    padding: 5px;
+    margin-right: 5px;
+    width: 22rem;
+}
+.input__radio {
+    display: flex;
+    flex-direction: row;
+}
+
+.radio__options {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+}
+
+.personal-data div label {
+    font-size: 120%;
+}
+
+input {
+    font-size: 110%;
+    font-weight: bold;
+}
+
+button {
+    font-size: 110%;
+    background-color: var(--button_color);
+    color: white;
+    box-shadow: var(--background_color) 5px 2px 2px;
+    border: none;
+}
+
+.personal-data button {
+    padding: 15px;
+    width: 250px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    width: 25rem;
+}
+
+.buttons button {
+    padding: 1rem;
+    width: 6rem;
 }
